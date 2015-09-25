@@ -1,0 +1,579 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xili-postinpost\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-08 13:26+0100\n"
+"PO-Revision-Date: 2015-05-08 13:29+0100\n"
+"Last-Translator: dev.xiligroup <contact@xiligroup.com>\n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"esc_attr_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: xili-postinpost.php:146
+msgid "xili Post in Post plugin"
+msgstr "Extension xili Post in Post"
+
+#: xili-postinpost.php:146
+msgid "©xili Post in Post"
+msgstr "© xili Post in Post"
+
+#: xili-postinpost.php:157
+msgid "Mail & Support"
+msgstr "Courriel et support"
+
+#: xili-postinpost.php:183
+msgid "Note:"
+msgstr "Note :"
+
+#: xili-postinpost.php:186
+msgid "Mail to dev.xiligroup"
+msgstr "Courriel pour dev.xiligroup"
+
+#: xili-postinpost.php:187
+msgid "Cc:"
+msgstr "Cc :"
+
+#: xili-postinpost.php:197
+#, php-format
+msgid "Theme name: %s"
+msgstr "Nom du thème : %s"
+
+#: xili-postinpost.php:210
+#, php-format
+msgid "Other xili plugins = %s"
+msgstr "Autres plugins xili : %s"
+
+#: xili-postinpost.php:213
+msgid "Type of webmaster:"
+msgstr "Type de webmestre :"
+
+#: xili-postinpost.php:216
+msgid "Define your experience as webmaster…"
+msgstr "Décrivez votre expérience en webmestre…"
+
+#: xili-postinpost.php:217
+msgid "Newbie in WP"
+msgstr "Novice en WP"
+
+#: xili-postinpost.php:218
+msgid "Good knowledge in WP and few in php"
+msgstr "Bon niveau en WP mais peu en php"
+
+#: xili-postinpost.php:219
+msgid "Good knowledge in WP, CMS and good in php"
+msgstr "Bon niveau en WP, CMS et bon en php"
+
+#: xili-postinpost.php:220
+msgid "WP theme and /or plugin developper"
+msgstr "Développeur de themes WP et/ou de Plugin pour WP"
+
+#: xili-postinpost.php:223
+msgid "Subject:"
+msgstr "Objet :"
+
+#: xili-postinpost.php:226
+msgid "Choose topic..."
+msgstr "Choisir le thème..."
+
+#: xili-postinpost.php:227
+msgid "Message"
+msgstr "Message"
+
+#: xili-postinpost.php:228
+msgid "Question"
+msgstr "Question"
+
+#: xili-postinpost.php:229
+msgid "Encouragement"
+msgstr "Encouragement"
+
+#: xili-postinpost.php:230
+msgid "Support need"
+msgstr "Demande de support"
+
+#: xili-postinpost.php:232
+msgid "Your message here…"
+msgstr "Ecrire votre message…"
+
+#: xili-postinpost.php:235
+msgid ""
+"Before send the mail, check the infos to be sent and complete textarea. A "
+"copy (Cc:) is sent to webmaster email (modify it if needed)."
+msgstr ""
+"Avant d'envoyer le courriel, cocher les infos à envoyer et compléter les "
+"autres champs. Une copie est envoyée au webmestre (courriel à modifier si "
+"nécessaire)."
+
+#: xili-postinpost.php:236
+msgid "Reply in less that 3 or 4 days…"
+msgstr "Réponse dans quelques jours, soyez patient…"
+
+#: xili-postinpost.php:239
+msgid "Send email"
+msgstr "Envoyer le courriel"
+
+#: xili-postinpost.php:290
+#, php-format
+msgid "Thanks for your email. A copy was sent to %s (%s)"
+msgstr "Merci pour votre courriel dont une copie est envoyé à %s (%s)"
+
+#: xili-postinpost.php:293
+msgid "Settings updated."
+msgstr "Réglages mis à jour"
+
+#: xili-postinpost.php:294
+msgid "Email sent."
+msgstr "Courriel envoyé"
+
+#: xili-postinpost.php:299
+msgid "xili Post in Post"
+msgstr "xili Post in Post"
+
+#: xili-postinpost.php:334
+msgid ""
+"xili-postinpost provides a triple tookit to insert post(s) everywhere in "
+"webpage. Template tag function, shortcode and widget are available."
+msgstr ""
+"xili-postinpost apporte une triple boite à outils pour insérer un ou "
+"plusieurs articles à tout endroit de la page. Balise de thème (template "
+"tag), balise de contenu (shortcode) et widget sont mis à disposition."
+
+#: xili-postinpost.php:336
+msgid "<strong>Template tag</strong>: xi_postinpost( - array of params - )"
+msgstr ""
+"<strong>Template tag</strong>: xi_postinpost( - tableau de paramètres - )"
+
+#: xili-postinpost.php:340
+msgid ""
+"The default parameters in array before merging with yours, (from source)"
+msgstr ""
+"Ci-dessous, les paramètres par défaut avant la fusion avec les vôtres "
+"(extrait des sources),"
+
+#: xili-postinpost.php:357
+msgid ""
+"By default, xili_postinpost returns the latest post (linked title and "
+"content) !"
+msgstr ""
+"Par défaut, l'extension retourne le dernier article (titre lien et contenu) !"
+
+#: xili-postinpost.php:359
+msgid ""
+"<strong>Shortcode</strong>: [xilipostinpost], as [xilipostinpost query="
+"\"p=1\"]"
+msgstr ""
+"<strong>Shortcode</strong>: [xilipostinpost], comme ici [xilipostinpost "
+"query=\"p=1\"]"
+
+#: xili-postinpost.php:360
+#, php-format
+msgid "Or like: %s if xili-language active."
+msgstr "Ou comme ici : %s (si xili-language est actif."
+
+#: xili-postinpost.php:365
+msgid "Insert Edit link:"
+msgstr "Insertion du lien de modification :"
+
+#: xili-postinpost.php:369
+msgid "Widget available:"
+msgstr "Widget activé"
+
+#: xili-postinpost.php:374
+msgid "Display period available:"
+msgstr "Période d'affichage possible :"
+
+#: xili-postinpost.php:378
+msgid "HTML tags settings:"
+msgstr "Réglage des balises HTML visible :"
+
+#: xili-postinpost.php:386
+msgid "Save Changes"
+msgstr "Sauver les modifications"
+
+#: xili-postinpost.php:390
+msgid "Syntax examples in widget setting UI"
+msgstr "Exemples de syntaxe dans l'interface du widget"
+
+#: xili-postinpost.php:391
+msgid "Here simple query"
+msgstr "Voici une requête simple"
+
+#: xili-postinpost.php:392
+msgid "A post display with title and excerpt"
+msgstr "Un article affiché avec titre et extrait"
+
+#: xili-postinpost.php:397
+msgid "Here conditional query"
+msgstr "Voilà une requête avec condition"
+
+#: xili-postinpost.php:398
+msgid ""
+"Three posts of category 3 displayed with title and link IF a page is "
+"displayed (with two widgets options set):"
+msgstr ""
+"Affichage de trois articles avec titre (et lien) <strong>si</strong> une "
+"page est affichée (les deux options de réglages du widget sont activées) :"
+
+#: xili-postinpost.php:400
+msgid "Another conditional query"
+msgstr "Une autre requête avec condition"
+
+#: xili-postinpost.php:401
+msgid "True and false conditions example: what happens and when ?"
+msgstr ""
+"Un exemple avec une deuxième condition si la première est fausse : que se "
+"passe-t-il et quand ?"
+
+#: xili-postinpost.php:403
+msgid "Another query with multilingual context"
+msgstr "Une autre requête dans un contexte multilingue"
+
+#: xili-postinpost.php:404
+msgid "A query combined with current language (requires xili-language active)"
+msgstr ""
+"Une requête combinant aussi la langue courante (requiert l'extension xili-"
+"language active)"
+
+#: xili-postinpost.php:408
+msgid "Author"
+msgstr "Auteur"
+
+#: xili-postinpost.php:440
+msgid "Settings"
+msgstr "Réglages"
+
+#: xili-postinpost.php:457
+msgid "Things to remember to set xili-postinpost:"
+msgstr "Eléments à mémoriser pour régler xili-postinpost"
+
+#: xili-postinpost.php:459
+msgid "Verify that the theme can use widget."
+msgstr "Vérifier que le thème peut intégrer des widgets"
+
+#: xili-postinpost.php:460
+msgid ""
+"As developer, visit <a href=\"http://dev.xiligroup.com/?forum=other-plugins"
+"\" target=\"_blank\">dev.xiligroup forum</a> to discover powerful features "
+"and filters to customize your results."
+msgstr ""
+"Comme développeur, visiter <a href=\"http://dev.xiligroup.com/?forum=other-"
+"plugins\" target=\"_blank\">le forum dev.xiligroup</a> pour découvrir les "
+"possibilités et les filtres pour personnaliser les résultats."
+
+#: xili-postinpost.php:461
+msgid "Visit dev.xiligroup website."
+msgstr ""
+"Visiter le site <a href=\"http://dev.xiligroup.com/xili-postinpost\" target="
+"\"_blank\">dev.xiligroup.com</a>"
+
+#: xili-postinpost.php:467
+msgid "In xili-postinpost settings it possible to set general options:"
+msgstr ""
+"Dans les réglages de xili-postinpost, il est possible de définir des options "
+"générales :"
+
+#: xili-postinpost.php:469
+msgid ""
+"Insert Edit link: add automatically the link after the post in the series. "
+"Can also be set as parameters in query (displayeditlink). The local "
+"parameter has priority."
+msgstr ""
+"Insérer le lien 'modifier' : Ajoute automatiquement ce lien après chaque "
+"article résultant de la requête. Ce paramètre peut-être activé pour chacune "
+"des requêtes. Ce réglage local est alors prioritaire."
+
+#: xili-postinpost.php:470
+msgid "Post in post Widget available in Appearance screen"
+msgstr "Widget disponible dans l'écran apparence"
+
+#: xili-postinpost.php:471
+msgid "Display period available inside widget settings window."
+msgstr "Afficher la période d'affichage dans le widget."
+
+#: xili-postinpost.php:472
+msgid "HTML tags settings inside widget window."
+msgstr "Réglage des balises HTML visible dans le widget."
+
+#: xili-postinpost.php:477
+msgid "For more information:"
+msgstr "Pour plus d'infos :"
+
+#: xili-postinpost.php:478
+msgid ""
+"<a href=\"http://dev.xiligroup.com/xili-postinpost\" target=\"_blank\">Xili-"
+"PostinPost Plugin Documentation</a>"
+msgstr ""
+"<a href=\"http://dev.xiligroup.com/xili-postinpost\" target=\"_blank"
+"\">Documentation de l'extension xili-postinpost</a>"
+
+#: xili-postinpost.php:479
+msgid ""
+"<a href=\"http://wiki.xiligroup.org/\" target=\"_blank\">Xili Wiki "
+"Documentation</a>"
+msgstr ""
+"<a href=\"http://wiki.xiligroup.org/\" target=\"_blank\">Documentation Xili "
+"Wiki</a>"
+
+#: xili-postinpost.php:480
+msgid ""
+"<a href=\"http://dev.xiligroup.com/?forum=other-plugins\" target=\"_blank"
+"\">Support Forums</a>"
+msgstr ""
+"<a href=\"http://dev.xiligroup.com/?forum=other-plugins\" target=\"_blank"
+"\">Forums support</a>"
+
+#: xili-postinpost.php:481
+msgid ""
+"<a href=\"http://codex.wordpress.org/\" target=\"_blank\">WordPress "
+"Documentation</a>"
+msgstr ""
+"<a href=\"http://codex.wordpress.org/\" target=\"_blank\">Documentation <a "
+"href=\"http://codex.wordpress.org/\" target=\"_blank\">WordPress "
+"Documentation</a></a>"
+
+#: xili-postinpost.php:486
+msgid "Things to remember"
+msgstr "Eléments à mémoriser"
+
+#: xili-postinpost.php:492
+msgid "Available options"
+msgstr "Options disponibles"
+
+#: xili-postinpost.php:498
+msgid "For more information"
+msgstr "Plus d'information"
+
+#: xili-postinpost.php:565
+msgid "Docs about xili-postinpost"
+msgstr "Docs sur xili-postinpost"
+
+#: xili-postinpost.php:573
+#, php-format
+msgid "%s Post in post updated"
+msgstr "%s Post in post mis à jour"
+
+#: xili-postinpost.php:574 xili-postinpost.php:593
+#, php-format
+msgid "xili-postinpost was updated to version %s"
+msgstr "xili-postinpost mis à jour en version %s"
+
+#: xili-postinpost.php:576
+#, php-format
+msgid ""
+"This version %s add a selector to choose size of image in widget. Tested "
+"with WP 4.2 Powell."
+msgstr ""
+"Cette nouvelle version %s ajoute un sélecteur dans le widget pour choisir la "
+"taille de l’image affichable. Testé avec WP 4.2 Powell."
+
+#: xili-postinpost.php:578
+#, php-format
+msgid ""
+"The previous version of %s improves query when done in front page with xili-"
+"language active."
+msgstr ""
+"La version précédente de la %s améliore les requêtes si elles sont insérées "
+"en page d'accueil avec xili-language active."
+
+#: xili-postinpost.php:580 xili-postinpost.php:602
+msgid "See submenu"
+msgstr "Voir le sous-menu"
+
+#: xili-postinpost.php:580 xili-postinpost.php:602
+msgid "Post in post Options Settings"
+msgstr "Réglage des options Post in post "
+
+#: xili-postinpost.php:581 xili-postinpost.php:603
+#, php-format
+msgid ""
+"Before to question dev.xiligroup support, do not forget to visit %s "
+"documentation"
+msgstr ""
+"Avant de questionner le support dev.xiligroup, ne pas oublier de consulter "
+"la documentation %s"
+
+#: xili-postinpost.php:592
+#, php-format
+msgid "%s Post in post widget updated"
+msgstr "widget %s Post in post widget mis à jour"
+
+#: xili-postinpost.php:595
+#, php-format
+msgid "This version %s adds previewing feature for theme/customize (WP 3.9+)"
+msgstr ""
+"Cette version %s ajoute les possibilités de prévisualisation dans la page "
+"Apparence/personnalisation (WP 3.9+)"
+
+#: xili-postinpost.php:597
+#, php-format
+msgid ""
+"The previous version of %s adds the new params “more” for content part in "
+"widget [shortcode]"
+msgstr ""
+"La version précédente à %s ajoutait un nouveau paramètre “more” utilisé dans "
+"le contenu - pour shortcode ou widget."
+
+#: xili-postinpost.php:599
+msgid ""
+"In this example - [condition=‘is_front_page’ query=‘cat=11’ more=‘please "
+"read more’] -, the widget will be displayed only if front_page and with a "
+"content and a more link “please read more”..."
+msgstr ""
+"Dans cet exemple - [condition=‘is_front_page’ query=‘cat=11’ more=‘please "
+"read more’] -, le widget sera visible si c’est la page d’accueil et le "
+"contenu sera terminé par le lien more “please read more”..."
+
+#: xili-postinpost.php:667 xili-postinpost.php:730
+msgid "no post"
+msgstr "pas d'article"
+
+#: xili-postinpost.php:879
+msgid "Edit This"
+msgstr "Modifier"
+
+#: xili-postinpost.php:912
+msgid "Display post in widget, by ©xiligroup v."
+msgstr "Affiche des articles via un widget par ©xiligroup v."
+
+#: xili-postinpost.php:914
+msgid "Post in post"
+msgstr "Post in post"
+
+#: xili-postinpost.php:1130
+msgid "Title:"
+msgstr "Titre :"
+
+#: xili-postinpost.php:1132
+msgid "Show post title"
+msgstr "Affiche le titre"
+
+#: xili-postinpost.php:1132
+msgid "Title as link"
+msgstr "Titre comme lien"
+
+#: xili-postinpost.php:1133
+msgid "Show:"
+msgstr "Affiche :"
+
+#: xili-postinpost.php:1134
+msgid "Content"
+msgstr "Contenu"
+
+#: xili-postinpost.php:1134
+msgid "Excerpt"
+msgstr "Extrait"
+
+#: xili-postinpost.php:1135
+msgid "Size of Featured image:"
+msgstr "Taille de l'image en une :"
+
+#: xili-postinpost.php:1137
+msgid "thumbnail"
+msgstr "miniature"
+
+#: xili-postinpost.php:1138
+msgid "medium"
+msgstr "moyenne"
+
+#: xili-postinpost.php:1139
+msgid "large"
+msgstr "grande"
+
+#: xili-postinpost.php:1142
+msgid "Featured image"
+msgstr "Image en une"
+
+#: xili-postinpost.php:1143
+msgid "Image as link"
+msgstr "Image comme lien"
+
+#: xili-postinpost.php:1145
+msgid "Number of posts to show:"
+msgstr "Nombre à afficher :"
+
+#: xili-postinpost.php:1147
+msgid "Params and conditions:"
+msgstr "Paramètres (et conditions) :"
+
+#: xili-postinpost.php:1151
+msgid "HTML settings"
+msgstr "Réglages HTML"
+
+#: xili-postinpost.php:1152
+msgid "Block tags"
+msgstr "Balise du bloc"
+
+#: xili-postinpost.php:1154
+msgid "Title tags"
+msgstr "Balise du titre"
+
+#: xili-postinpost.php:1157
+msgid "LI class:"
+msgstr "LI class:"
+
+#: xili-postinpost.php:1158
+msgid ""
+"Note: if LI class is empty no LI are generated around each post, if set, "
+"don't forget to set above tag's block of results to UL or OL !"
+msgstr ""
+"Note: if LI class is empty no LI are generated around each post, if set, "
+"don't forget to set above tag's block of results to UL or OL !"
+
+#: xili-postinpost.php:1159
+msgid "Function (must exists)"
+msgstr "Fonction spéciale (doit être présente dans le code)"
+
+#: xili-postinpost.php:1174
+msgid "Dates of display period"
+msgstr "Période d'affichage"
+
+#: xili-postinpost.php:1175
+msgid "Leave inputs empty for permanent display."
+msgstr "Laisser les champs vides pour un affichage permanent."
+
+#: xili-postinpost.php:1176
+msgid "From:"
+msgstr "De :"
+
+#: xili-postinpost.php:1177 xili-postinpost.php:1179
+msgid "(aaaa-mm-dd hh:mm)"
+msgstr "(aaaa-mm-jj hh:mm)"
+
+#: xili-postinpost.php:1178
+msgid "To:"
+msgstr "à :"
+
+#~ msgid ""
+#~ "The previous versions of %s add previewing feature for theme/customize/"
+#~ "widget (WP 3.9+) and a new filter for nopost results (developers), and "
+#~ "add the new params “more” for content part in widget [shortcode]"
+#~ msgstr ""
+#~ "Ces versions précédentes à %s ajoutent les possibilités de "
+#~ "prévisualisation dans la page Apparence/Personnalisation/Widget (WP "
+#~ "3.9+). Pour les développeurs, un nouveau filtre est ajouté pour "
+#~ "personnaliser le résultat \"nopost\". Elles ajoutent aussi le paramètre "
+#~ "“more” pour les contenus de widget ou shortcode."
+
+#~ msgid ""
+#~ "This version %s adds the new params “more” for content part in shortcode "
+#~ "and widget."
+#~ msgstr ""
+#~ "Cette version %s ajoute un nouveau paramètre “more” utilisé dans le "
+#~ "contenu - pour shortcode ou widget."
+
+#~ msgid "Previous version introduces new version numbering for WP 3.8+"
+#~ msgstr ""
+#~ "La version précédente introduisait la nouvelle numérotation de version "
+#~ "compatible WP 3.8+"
+
+#~ msgid "Preliminary doc in readme.txt and in forum…"
+#~ msgstr "Documentation dans le fichier Readme.txt et sur le forum…"
