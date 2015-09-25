@@ -4,17 +4,17 @@ Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.6.1
 Tested up to: 4.3
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
 
 == Description ==
 
-*xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage - outside or inside WP loop - . The displayed post(s) are resulting of queries like those in WP loop but not interfere with main WP loop. Widget contains conditional syntax.*
+*xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage - outside or inside WP loop - . The displayed post(s) are resulting of queries (see codex) like those in WP loop but not interfere with main WP loop. Widget contains conditional syntax.*
 
 * Template tag function `xi_postinpost()` - see source ,
-* shortcode like `[xilipostinpost query="p=1"]` or like `<blockquote>[xilipostinpost query="cat=3,4,150&showposts=2&lang=en_us"]</blockquote>` as in [About Page](http://dev.xiligroup.com/?page_id=3) at end.
+* shortcode like `[xilipostinpost query="p=1"]` or like `<blockquote>[xilipostinpost query="cat=3,4,150&showposts=2&lang=en_us"]</blockquote>`.
 * A shortcode like `<blockquote>[xilipostinpost query="cat=3,4,150&showposts=2" lang="cur"]</blockquote>` with param `lang` set to `cur` give a result according the current language (example: inside an undefined page displayed according browser language).
 
 * and widget with powerful syntax for contextual display of query's result.
@@ -23,15 +23,15 @@ are available for developers, authors and webmasters.
 
 In widget (and template tag), if option is set, it is possible to choose display period and expiration date.
 
-In widget - if [xili-language plugin](https://wordpress.org/plugins/xili-language/) active - to combine a query and the current language use params like `[query="cat=14" lang="cur"]` with square bracket`[]` and lang set cur. Don't put *cur* in query. See [screenshot](http://wordpress.org/plugins/xili-postinpost/screenshots/).
+In widget - if [xili-language plugin](https://wordpress.org/plugins/xili-language/) active - to combine a query and the current language use params like `[query="cat=14" lang="cur"]` with square bracket`[]` and lang set cur. Don't put *cur* in query. See [screenshot](https://wordpress.org/plugins/xili-postinpost/screenshots/).
 
 For each post of the resulting list, the displayed result is hightly customizable and can contain title, excerpt, content, thumbnail image with or without link to the post as single.
 
 Paging is preserved even if a shortcode is used in a list of posts.
 
-= New with 1.6.0 : =
+= New with 1.6.1 : =
 * Last Updated 2015-05-08
-* see [tab and chapters in changelog](http://wordpress.org/extend/plugins/xili-postinpost/changelog/)
+* see [tab and chapters in changelog](https://wordpress.org/extend/plugins/xili-postinpost/changelog/)
 
 == Installation ==
 
@@ -103,7 +103,7 @@ Yes [xili-language plugin](https://wordpress.org/plugins/xili-language/) is comp
 
 = Support Forum or contact form ? =
 
-Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to obtain some support.
+Effectively, prefer [forum](https://wordpress.org/support/plugin/xili-postinpost) to obtain some support.
 
 == Screenshots ==
 
@@ -169,7 +169,7 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.8.0 =
 * 2010-11-12 - first public release w/o settings admin
 
-© 2015-05-08 - MS - dev.xiligroup.com
+© 2015-09-25 - MS - dev.xiligroup.com
 == More infos ==
 
 * Tested on WP mono and multisite mode.
