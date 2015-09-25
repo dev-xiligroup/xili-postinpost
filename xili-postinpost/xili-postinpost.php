@@ -4,13 +4,14 @@ Plugin Name: xili-postinpost
 Plugin URI: http://dev.xiligroup.com/xili-postinpost/
 Description: xili-postinpost provides a triple tookit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available. The post(s) are resulting of queries like those in WP loop but not interfere with main WP loop. Widget contains conditional syntax.
 Author: dev.xiligroup.com - MS
-Version: 1.6.0
+Version: 1.6.1
 Author URI: http://dev.xiligroup.com
 Text Domain: xili_postinpost
 License: GPLv2
 */
 
 /*
+ * 2015-09-27 - 1.6.1 - WP 4.3 - replyto
  * 2015-05-08 - 1.6.0 - widget now display chosen size of image (featuredimagesize)
  * 2014-12-22 - 1.5.3 - improves query if permalinks and xili_language active - thanks to acizmeli
  * 2014-12-11 - 1.5.2 - WPLANG as function - WP 4.0+ - add do_action before/after widget_text filter to patch Karma Theme
@@ -39,7 +40,7 @@ License: GPLv2
  *
  */
 
-define('XILI_PIP_VERSION', '1.6.0');
+define('XILI_PIP_VERSION', '1.6.1');
 
 class xili_postinpost {
 
@@ -184,7 +185,7 @@ class xili_postinpost {
 			<p><strong><?php echo $message;?></strong></p>
 		<?php } ?>
 		<fieldset style="margin:2px; padding:12px 6px; border:1px solid #ccc;"><legend><?php echo _e('Mail to dev.xiligroup', 'xili_postinpost'); ?></legend>
-		<label for="ccmail"><?php _e('Cc:','xili_postinpost'); ?>
+		<label for="ccmail"><?php _e('Cc: (Reply to:)','xili_postinpost'); ?>
 		<input class="widefat" id="ccmail" name="ccmail" type="text" value="<?php bloginfo ('admin_email') ; ?>" /></label><br /><br />
 		<?php if ( false === strpos( get_bloginfo ('url'), 'local' ) ){ ?>
 			<label for="urlenable">
@@ -275,7 +276,10 @@ class xili_postinpost {
 			$contextual_arr[] = $this->xili_settings['webmestre-level'];
 
 			$headers = 'From: Xili-PostinPost Page <' . get_bloginfo ('admin_email').'>' . "\r\n" ;
-			if ( '' != $_POST['ccmail'] ) $headers .= 'Cc: <'.$_POST['ccmail'].'>' . "\r\n";
+			if ( '' != $_POST['ccmail'] ) {
+				$headers .= 'Cc: <'.$_POST['ccmail'].'>' . "\r\n";
+				$headers .= 'Reply-To: <'.$_POST['ccmail'].'>' . "\r\n";
+			}
 			$headers .= "\\";
 			$message = "Message sent by: ".get_bloginfo ('admin_email')."\n\n" ;
 			$message .= "Subject: ".$_POST['subject']."\n\n" ;
@@ -457,7 +461,7 @@ class xili_postinpost {
 		'<p>' . __('Things to remember to set xili-postinpost:','xili_postinpost') . '</p>' .
 		'<ul>' .
 		'<li>' . __('Verify that the theme can use widget.','xili_postinpost') . '</li>' .
-		'<li>' . __('As developer, visit <a href="http://dev.xiligroup.com/?forum=other-plugins" target="_blank">dev.xiligroup forum</a> to discover powerful features and filters to customize your results.','xili_postinpost') . '</li>' .
+		'<li>' . __('As developer, visit <a href="https://wordpress.org/support/plugin/xili-postinpost" target="_blank">dev.xiligroup forum</a> to discover powerful features and filters to customize your results.','xili_postinpost') . '</li>' .
 		'<li>' . __('Visit dev.xiligroup website.','xili_postinpost') . '</li>' .
 
 
@@ -477,7 +481,7 @@ class xili_postinpost {
 			'<p><strong>' . __('For more information:') . '</strong></p>' .
 			'<p>' . __('<a href="http://dev.xiligroup.com/xili-postinpost" target="_blank">Xili-PostinPost Plugin Documentation</a>','xili_postinpost') . '</p>' .
 			'<p>' . __('<a href="http://wiki.xiligroup.org/" target="_blank">Xili Wiki Documentation</a>','xili_postinpost') . '</p>' .
-		'<p>' . __('<a href="http://dev.xiligroup.com/?forum=other-plugins" target="_blank">Support Forums</a>','xili_postinpost') . '</p>' .
+		'<p>' . __('<a href="https://wordpress.org/support/plugin/xili-postinpost" target="_blank">Support Forums</a>','xili_postinpost') . '</p>' .
 		'<p>' . __('<a href="http://codex.wordpress.org/" target="_blank">WordPress Documentation</a>','xili_postinpost') . '</p>' ;
 
 
@@ -573,12 +577,12 @@ class xili_postinpost {
 					$pointer_text = '<h3>' . esc_js( sprintf( __( '%s Post in post updated', 'xili_postinpost'), '[©xili]') ) . '</h3>';
 				$pointer_text .= '<p>' . esc_js( sprintf( __( 'xili-postinpost was updated to version %s', 'xili_postinpost' ) , XILI_PIP_VERSION) ). '.</p>';
 
-				$pointer_text .= '<p>' . esc_js( sprintf(__( 'This version %s add a selector to choose size of image in widget. Tested with WP 4.2 Powell.', 'xili_postinpost'), XILI_PIP_VERSION) ). '.</p>';
+				$pointer_text .= '<p>' . esc_js( sprintf(__( 'This version %s add a selector to choose size of image in widget. Tested with WP 4.3 Billie.', 'xili_postinpost'), XILI_PIP_VERSION) ). '.</p>';
 
 				$pointer_text .= '<p>' . esc_js( sprintf(__( 'The previous version of %s improves query when done in front page with xili-language active.', 'xili_postinpost'), XILI_PIP_VERSION) ). '.</p>';
 
 				$pointer_text .= '<p>' . esc_js( __( 'See submenu', 'xili_postinpost' ).' “<a href="options-general.php?page=xili_postinpost_page">'. __('Post in post Options Settings','xili_postinpost')."</a>”" ). '.</p>';
-				$pointer_text .= '<p>' . esc_js( sprintf(__( 'Before to question dev.xiligroup support, do not forget to visit %s documentation', 'xili_postinpost' ), '<a href="http://wordpress.org/plugins/xili-postinpost/" title="'.$about.'" >wiki</a>' ) ). '.</p>';
+				$pointer_text .= '<p>' . esc_js( sprintf(__( 'Before to question dev.xiligroup support, do not forget to visit %s documentation', 'xili_postinpost' ), '<a href="https://wordpress.org/plugins/xili-postinpost/" title="'.$about.'" >wiki</a>' ) ). '.</p>';
 					$pointer_dismiss = 'xpp-new-version-'.str_replace('.', '-', XILI_PIP_VERSION);
 
 					$pointer_div = '#menu-settings';
@@ -600,7 +604,7 @@ class xili_postinpost {
 
 
 				$pointer_text .= '<p>' . esc_js( __( 'See submenu', 'xili_postinpost' ).' “<a href="options-general.php?page=xili_postinpost_page">'. __('Post in post Options Settings','xili_postinpost')."</a>”" ). '.</p>';
-				$pointer_text .= '<p>' . esc_js( sprintf(__( 'Before to question dev.xiligroup support, do not forget to visit %s documentation', 'xili_postinpost' ), '<a href="http://wordpress.org/plugins/xili-postinpost/" title="'.$about.'" >wiki</a>' ) ). '.</p>';
+				$pointer_text .= '<p>' . esc_js( sprintf(__( 'Before to question dev.xiligroup support, do not forget to visit %s documentation', 'xili_postinpost' ), '<a href="https://wordpress.org/plugins/xili-postinpost/" title="'.$about.'" >wiki</a>' ) ). '.</p>';
 					$pointer_dismiss = 'xpp-new-features-'.str_replace('.', '-', XILI_PIP_VERSION);
 
 					$pointer_div = '#available-widgets';
