@@ -3,7 +3,7 @@ Contributors: michelwppi, MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.6.1
-Tested up to: 4.3
+Tested up to: 4.4.1
 Stable tag: 1.6.1
 License: GPLv2
 
@@ -30,7 +30,7 @@ For each post of the resulting list, the displayed result is hightly customizabl
 Paging is preserved even if a shortcode is used in a list of posts.
 
 = New with 1.6.1 : =
-* Last Updated 2015-05-08
+* Last Updated 2016-01-24
 * see [tab and chapters in changelog](https://wordpress.org/extend/plugins/xili-postinpost/changelog/)
 
 == Installation ==
@@ -117,7 +117,8 @@ Run [live here](http://dev.xiligroup.com/)
 6. appearance - customize - widget settings UI: real time results during settings (WP 3.9+)
 
 == Changelog ==
-= 1.6.0 =
+= 1.6.0 1.6.1 =
+* readme - support form
 * 2015-05-08 widget now display chosen size of image, param featuredimagesize (as in function or shorcode), new FAQ
 = 1.5.3 =
 * 2015-04-21 readme updated for WP 4.2
@@ -169,7 +170,7 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.8.0 =
 * 2010-11-12 - first public release w/o settings admin
 
-© 2015-09-25 - MS - dev.xiligroup.com
+© 2016-01-24 - MS - dev.xiligroup.com
 == More infos ==
 
 * Tested on WP mono and multisite mode.
