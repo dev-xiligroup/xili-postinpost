@@ -3,8 +3,8 @@ Contributors: michelwppi, MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.6.1
-Tested up to: 4.4.1
-Stable tag: 1.6.1
+Tested up to: 4.4.2
+Stable tag: 1.6.2
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -29,8 +29,8 @@ For each post of the resulting list, the displayed result is hightly customizabl
 
 Paging is preserved even if a shortcode is used in a list of posts.
 
-= New with 1.6.1 : =
-* Last Updated 2016-01-24
+= New with 1.6.2 : =
+* Last Updated 2016-02-10
 * see [tab and chapters in changelog](https://wordpress.org/extend/plugins/xili-postinpost/changelog/)
 
 == Installation ==
@@ -117,6 +117,8 @@ Run [live here](http://dev.xiligroup.com/)
 6. appearance - customize - widget settings UI: real time results during settings (WP 3.9+)
 
 == Changelog ==
+= 1.6.2 (2016-02-10) =
+* compatible with glotpress - text domain (and .po/.mo filenames) same as plugin name
 = 1.6.0 1.6.1 =
 * readme - support form
 * 2015-05-08 widget now display chosen size of image, param featuredimagesize (as in function or shorcode), new FAQ
@@ -170,7 +172,7 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.8.0 =
 * 2010-11-12 - first public release w/o settings admin
 
-© 2016-01-24 - MS - dev.xiligroup.com
+© 2016-02-10 - MS - dev.xiligroup.com
 == More infos ==
 
 * Tested on WP mono and multisite mode.
