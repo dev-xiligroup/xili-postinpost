@@ -4,13 +4,15 @@ Plugin Name: xili-postinpost
 Plugin URI: http://dev.xiligroup.com/xili-postinpost/
 Description: xili-postinpost provides a triple tookit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available. The post(s) are resulting of queries like those in WP loop but not interfere with main WP loop. Widget contains conditional syntax.
 Author: dev.xiligroup.com - MS
-Version: 1.6.2
+Version: 1.6.3
 Author URI: http://dev.xiligroup.com
 Text Domain: xili-postinpost
 License: GPLv2
 */
 
 /*
+ * 2017-06-21 - 1.6.3 - fixes widget constructor
+
  * 2016-02-10 - 1.6.2 - compatible with glotpress - text domain same as plugin name
 
  * 2015-09-27 - 1.6.1 - WP 4.3 - replyto
@@ -42,7 +44,7 @@ License: GPLv2
  *
  */
 
-define('XILI_PIP_VERSION', '1.6.2');
+define('XILI_PIP_VERSION', '1.6.3');
 
 class Xili_Postinpost {
 
@@ -913,6 +915,10 @@ function the_text_domain() {
  */
 
 class xili_post_in_post_Widget extends WP_Widget {
+
+	public function __construct() {
+		$this->xili_post_in_post_Widget();
+	}
 
 	function xili_post_in_post_Widget() {
 		$widget_ops = array('classname' => 'xili_post_in_post_Widget', 'description' => __('Display post in widget, by ©xiligroup v.', 'xili-postinpost').'&nbsp;'.XILI_PIP_VERSION);
