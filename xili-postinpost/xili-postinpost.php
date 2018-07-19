@@ -4,13 +4,15 @@ Plugin Name: xili-postinpost
 Plugin URI: http://dev.xiligroup.com/xili-postinpost/
 Description: xili-postinpost provides a triple tookit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available. The post(s) are resulting of queries like those in WP loop but not interfere with main WP loop. Widget contains conditional syntax.
 Author: dev.xiligroup.com - MS
-Version: 1.6.3
+Version: 1.6.4
 Author URI: http://dev.xiligroup.com
 Text Domain: xili-postinpost
 License: GPLv2
 */
 
-/*
+/**
+ * 2018-07-19 - 1.6.4 - verified with WP 4.9.x
+
  * 2017-06-21 - 1.6.3 - fixes widget constructor
 
  * 2016-02-10 - 1.6.2 - compatible with glotpress - text domain same as plugin name
@@ -44,7 +46,7 @@ License: GPLv2
  *
  */
 
-define('XILI_PIP_VERSION', '1.6.3');
+define('XILI_PIP_VERSION', '1.6.4');
 
 class Xili_Postinpost {
 
@@ -600,7 +602,7 @@ class Xili_Postinpost {
 					$pointer_text = '<h3>' . esc_js( sprintf( __( '%s Post in post widget updated', 'xili-postinpost'), '[©xili]') ) . '</h3>';
 				$pointer_text .= '<p>' . esc_js( sprintf( __( 'xili-postinpost was updated to version %s', 'xili-postinpost' ) , XILI_PIP_VERSION) ). '.</p>';
 
-				$pointer_text .= '<p>' . esc_js( sprintf(__( 'This version %s adds previewing feature for theme/customize (WP 3.9+)', 'xili-postinpost'), XILI_PIP_VERSION) ). '.</p>';
+				$pointer_text .= '<p>' . esc_js( sprintf(__( 'This version %s is confirmed to be compatible with 4.9+', 'xili-postinpost'), XILI_PIP_VERSION) ). '.</p>';
 
 				$pointer_text .= '<p>' . esc_js( sprintf(__( 'The previous version of %s adds the new params “more” for content part in widget [shortcode]', 'xili-postinpost'), XILI_PIP_VERSION) ). '.</p>';
 
@@ -1108,10 +1110,10 @@ class xili_post_in_post_Widget extends WP_Widget {
 		$instance['featuredimagesize'] = strip_tags($new_instance['featuredimagesize']); // 1.6
 		$instance['featuredimageaslink'] = isset($new_instance['featuredimageaslink']);
 		$instance['showposts'] = (int) $new_instance['showposts'];
-		$instance['beforeall'] = $new_instance['beforeall'];
-		$instance['afterall'] = $new_instance['afterall'];
-		$instance['beforetitle'] = $new_instance['beforetitle'];
-		$instance['aftertitle'] = $new_instance['aftertitle'];
+		$instance['beforeall'] = ( isset( $new_instance['beforeall'] ) ) ? $new_instance['beforeall'] : '';
+		$instance['afterall'] = ( isset( $new_instance['afterall'] ) ) ? $new_instance['afterall'] : '';
+		$instance['beforetitle'] = ( isset( $new_instance['beforetitle'] ) ) ? $new_instance['beforetitle'] : '';
+		$instance['aftertitle'] = ( isset( $new_instance['aftertitle'] ) ) ? $new_instance['aftertitle'] : '';
 		$instance['liclass'] = strip_tags($new_instance['liclass']);
 		$instance['fromdate'] = strip_tags($new_instance['fromdate']);
 		$instance['todate'] = strip_tags($new_instance['todate']);
