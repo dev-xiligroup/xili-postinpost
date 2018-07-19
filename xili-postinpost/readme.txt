@@ -118,6 +118,9 @@ Run [live here](http://dev.xiligroup.com/)
 6. appearance - customize - widget settings UI: real time results during settings (WP 3.9+)
 
 == Changelog ==
+= 1.6.4 (2018-07-19) =
+* tested with 4.9.x
+* notices fixed
 = 1.6.2 (2016-02-10) =
 * compatible with glotpress - text domain (and .po/.mo filenames) same as plugin name
 = 1.6.0 1.6.1 =
