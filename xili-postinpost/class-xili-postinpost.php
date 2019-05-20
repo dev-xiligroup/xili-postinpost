@@ -126,7 +126,7 @@ class Xili_Postinpost {
 	}
 
 	public function appearance_widget_pointer() {
-		$screen = get_current_screen(); error_log ( '--- '. $screen->id );
+		$screen = get_current_screen();
 		if ( 'widgets' == $screen->id ) {
 			$this->insert_news_pointer( 'xpp_new_features_widget' ); // pointer in menu for updated version
 			add_action( 'admin_print_footer_scripts', array( &$this, 'print_the_pointers_js' ) );
