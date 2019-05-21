@@ -42,7 +42,7 @@ class Xili_Post_In_Post_Widget extends WP_Widget {
 		$todate = ( isset( $instance['todate'] ) ) ? $instance['todate'] : '';
 
 		if ( '' != $fromdate || '' != $todate ) {
-			if ( false === strpos( $fromdate, '****' ) && false === strpos( $todate,' ****' ) ) {
+			if ( false === strpos( $fromdate, '****' ) && false === strpos( $todate, ' ****' ) ) {
 
 				$time = current_time( 'timestamp' ); // wp 3.0
 				if ( '' != $fromdate && $time < strtotime( $fromdate ) ) {
@@ -293,12 +293,12 @@ class Xili_Post_In_Post_Widget extends WP_Widget {
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
 		<p><input id="<?php echo esc_attr( $this->get_field_id( 'showtitle' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'showtitle' ) ); ?>" type="checkbox" <?php checked( isset( $instance['showtitle'] ) ? $instance['showtitle'] : 1); ?> />&nbsp;<label for="<?php echo esc_attr( $this->get_field_id( 'showtitle' ) ); ?>"><?php esc_html_e( 'Show post title', 'xili-postinpost' ); ?></label>&nbsp;&nbsp;<input id="<?php echo esc_attr( $this->get_field_id( 'titlelink' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'titlelink' ) ); ?>" type="checkbox" <?php checked(isset( $instance['titlelink'] ) ? $instance['titlelink'] : 1); ?> />&nbsp;<label for="<?php echo esc_attr( $this->get_field_id( 'titlelink' ) ); ?>"><?php esc_html_e( 'Title as link', 'xili-postinpost' ); ?></label></p>
 		<p><?php esc_html_e( 'Show:', 'xili-postinpost' ); ?>
-			<input id="<?php echo esc_attr( $this->get_field_id( 'content' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'content' ) ); ?>" type="checkbox" <?php checked( isset( $instance['content'] ) ? $instance['content'] : 0); ?> />&nbsp;<label for="<?php echo esc_attr( $this->get_field_id( 'content' ) ); ?>"><?php esc_html_e( 'Content', 'xili-postinpost' ); ?></label>&nbsp;&nbsp;<input id="<?php echo esc_attr( $this->get_field_id( 'excerpt' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'excerpt' ) ); ?>" type="checkbox" <?php checked( isset( $instance['excerpt'] ) ? $instance['excerpt'] : 0 ); ?> />&nbsp;<label for="<?php echo esc_attr( $this->get_field_id( 'excerpt' ) ); ?>"><?php esc_html_e( 'Excerpt', 'xili-postinpost' ); ?></label>
+			<input id="<?php echo esc_attr( $this->get_field_id( 'content' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'content' ) ); ?>" type="checkbox" <?php checked( isset( $instance['content'] ) ? $instance['content'] : 0 ); ?> />&nbsp;<label for="<?php echo esc_attr( $this->get_field_id( 'content' ) ); ?>"><?php esc_html_e( 'Content', 'xili-postinpost' ); ?></label>&nbsp;&nbsp;<input id="<?php echo esc_attr( $this->get_field_id( 'excerpt' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'excerpt' ) ); ?>" type="checkbox" <?php checked( isset( $instance['excerpt'] ) ? $instance['excerpt'] : 0 ); ?> />&nbsp;<label for="<?php echo esc_attr( $this->get_field_id( 'excerpt' ) ); ?>"><?php esc_html_e( 'Excerpt', 'xili-postinpost' ); ?></label>
 			<br /><label for="<?php echo esc_attr( $this->get_field_id( 'featuredimagesize' ) ); ?>"><?php esc_html_e( 'Size of Featured image:', 'xili-postinpost' ); ?></label>&nbsp;<select id="<?php echo esc_attr( $this->get_field_id( 'featuredimagesize' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'featuredimagesize' ) ); ?>">
 			<?php
-			echo '<option value="thumbnail" ' . selected( $instance['featuredimagesize'], "thumbnail", false) . '>' . __( 'thumbnail', 'xili-postinpost' ) . '</option>';
-			echo '<option value="medium" ' . selected( $instance['featuredimagesize'], "medium", false) . '>' . __( 'medium', 'xili-postinpost' ) . '</option>';
-			echo '<option value="large" ' . selected( $instance['featuredimagesize'], "large", false).'>' . __( 'large', 'xili-postinpost' ) . '</option>';
+			echo '<option value="thumbnail" ' . selected( $instance['featuredimagesize'], 'thumbnail', false ) . '>' . esc_html__( 'thumbnail', 'xili-postinpost' ) . '</option>';
+			echo '<option value="medium" ' . selected( $instance['featuredimagesize'], 'medium', false ) . '>' . esc_html__( 'medium', 'xili-postinpost' ) . '</option>';
+			echo '<option value="large" ' . selected( $instance['featuredimagesize'], 'large', false ) . '>' . esc_html__( 'large', 'xili-postinpost' ) . '</option>';
 			?>
 			</select>
 			<br /><input id="<?php echo esc_attr( $this->get_field_id( 'featuredimage' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'featuredimage' ) ); ?>" type="checkbox" <?php checked( isset( $instance['featuredimage'] ) ? $instance['featuredimage'] : 0 ); ?> />&nbsp;<label for="<?php echo esc_attr( $this->get_field_id( 'featuredimage' ) ); ?>"><?php esc_html_e( 'Featured image', 'xili-postinpost' ); ?></label>&nbsp;
