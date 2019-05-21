@@ -72,12 +72,11 @@ class Xili_Post_In_Post_Widget extends WP_Widget {
 			do_action( 'xpp_after_widget_text_filter', $instance );
 
 			$pos = strpos( $text, '[' );
-			if ( false == $pos ) {
-				// classical query
+			if ( false === $pos ) {
+				// classical query - false ===
 				$query = $text;
 				$condition_ok = true;
 			} else {
-
 				$default_params = array(
 					'more' => 'toto',
 					'query' => '',
@@ -102,17 +101,17 @@ class Xili_Post_In_Post_Widget extends WP_Widget {
 					$noflow = str_replace( ']', '', $thetwo[1] );
 				}
 
-				$flow_atts = shortcode_parse_atts( $flow ); //error_log ( 'widget atts = ' . serialize( $flow_atts ));
+				$flow_atts = shortcode_parse_atts( $flow );
 
 				$arr_result = shortcode_atts( $default_params, $flow_atts );
 				$thecondition = trim( $arr_result['condition'], '!' );
 
 				if ( '' != $arr_result['condition'] && function_exists( $thecondition ) ) {
 					$not = ( $thecondition == $arr_result['condition'] ) ? false : true;
-					$arr_params = ( '' != $arr_result['param'] ) ? array(explode( ',', $arr_result['param'] ) ) : array();
-					$condition_ok = ( $not ) ? !call_user_func_array( $thecondition, $arr_params ) : call_user_func_array ( $thecondition, $arr_params );
+					$arr_params = ( '' != $arr_result['param'] ) ? array( explode( ',', $arr_result['param'] ) ) : array();
+					$condition_ok = ( $not ) ? ! call_user_func_array( $thecondition, $arr_params ) : call_user_func_array( $thecondition, $arr_params );
 
-					if ( ! $condition_ok && ''!= $noflow ) {
+					if ( ! $condition_ok && '' != $noflow ) {
 						// check no condition
 						$flow_atts = shortcode_parse_atts( $noflow ); // echo 'no='.$noflow.' )';
 						$arr_result = shortcode_atts( $default_params, $flow_atts ); // new keys of second block
@@ -122,7 +121,7 @@ class Xili_Post_In_Post_Widget extends WP_Widget {
 						if ( '' != $arr_result['condition'] && function_exists( $thecondition ) ) {
 							$condition_ok = ( $not ) ? ! call_user_func_array( $thecondition, $arr_params ) : call_user_func_array( $thecondition, $arr_params ); // if false nothing displayed
 						} else {
-						$condition_ok = true; // display results of $query or postmeta
+							$condition_ok = true; // display results of $query or postmeta
 						}
 					}
 				} else {
@@ -308,30 +307,30 @@ class Xili_Post_In_Post_Widget extends WP_Widget {
 		<p><label for="<?php echo esc_attr( $this->get_field_id( 'showposts' ) ); ?>"><?php esc_html_e( 'Number of posts to show:', 'xili-postinpost' ); ?></label>
 		<input id="<?php echo esc_attr( $this->get_field_id( 'showposts' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'showposts' ) ); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
 		<small><?php esc_html_e( 'Params and conditions:', 'xili-postinpost' ); ?></small>
-		<textarea class="widefat" rows="5" cols="20" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>"><?php echo $text; ?></textarea>
+		<textarea class="widefat" rows="5" cols="20" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>" name="<?php echo $this->get_field_name( 'text' ); ?>"><?php echo $text; ?></textarea>
 
 		<?php
 		if ( $xili_postinpost->xili_settings['displayhtmltags'] ) {
 			?>
 		<fieldset style="margin:2px; padding:12px 6px; border:1px solid #ccc;"><legend><?php esc_html_e( 'HTML settings', 'xili-postinpost' ); ?></legend>
-		<p><input id="<?php echo esc_attr( $this->get_field_id( 'beforeall' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'beforeall' ) ); ?>" type="text" value="<?php echo $beforeall; ?>" size="40" /><br/><label for="<?php echo esc_attr( $this->get_field_id( 'afterall' ) ); ?>"><?php esc_html_e( 'Block tags', 'xili-postinpost' ); ?></label><input id="<?php echo esc_attr( $this->get_field_id( 'afterall' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'afterall' ) ); ?>" type="text" value="<?php echo $afterall; ?>" size="15" />
+		<p><input id="<?php echo $this->get_field_id( 'beforeall' ); ?>" name="<?php echo $this->get_field_name( 'beforeall' ); ?>" type="text" value="<?php echo $beforeall; ?>" size="40" /><br/><label for="<?php echo $this->get_field_id( 'afterall' ); ?>"><?php esc_html_e( 'Block tags', 'xili-postinpost' ); ?></label><input id="<?php echo $this->get_field_id( 'afterall' ); ?>" name="<?php echo $this->get_field_name( 'afterall' ); ?>" type="text" value="<?php echo $afterall; ?>" size="15" />
 		</p>
-		<p><input id="<?php echo esc_attr( $this->get_field_id( 'beforetitle' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'beforetitle' ) ); ?>" type="text" value="<?php echo $beforetitle; ?>" size="40" /><br/><label for="<?php echo esc_attr( $this->get_field_id( 'aftertitle' ) ); ?>"><?php esc_html_e( 'Title tags', 'xili-postinpost' ); ?></label><input id="<?php echo esc_attr( $this->get_field_id( 'aftertitle' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'aftertitle' ) ); ?>" type="text" value="<?php echo $aftertitle; ?>" size="5" />
+		<p><input id="<?php echo $this->get_field_id( 'beforetitle' ); ?>" name="<?php echo $this->get_field_name( 'beforetitle' ); ?>" type="text" value="<?php echo $beforetitle; ?>" size="40" /><br/><label for="<?php echo $this->get_field_id( 'aftertitle' ); ?>"><?php esc_html_e( 'Title tags', 'xili-postinpost' ); ?></label><input id="<?php echo $this->get_field_id( 'aftertitle' ); ?>" name="<?php echo $this->get_field_name( 'aftertitle' ); ?>" type="text" value="<?php echo $aftertitle; ?>" size="5" />
 		</p>
 		<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'liclass' ) ); ?>"><?php esc_html_e( 'LI class:', 'xili-postinpost' ); ?></label><input id="<?php echo esc_attr( $this->get_field_id( 'liclass'  ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'liclass' ) ); ?>" type="text" value="<?php echo $liclass; ?>" size="20" /></p>
+		<label for="<?php echo $this->get_field_id( 'liclass' ); ?>"><?php esc_html_e( 'LI class:', 'xili-postinpost' ); ?></label><input id="<?php echo $this->get_field_id( 'liclass'  ); ?>" name="<?php echo $this->get_field_name( 'liclass' ); ?>" type="text" value="<?php echo $liclass; ?>" size="20" /></p>
 		<p><small><?php _e("Note: if LI class is empty no LI are generated around each post, if set, don't forget to set above tag's block of results to UL or OL !", 'xili-postinpost' ); ?></small></p>
-		<p><label for="<?php echo esc_attr( $this->get_field_id( 'userfunction' ) ); ?>"><?php esc_html_e( 'Function (must exists)', 'xili-postinpost' ); ?></label><input id="<?php echo esc_attr( $this->get_field_id( 'userfunction' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'userfunction' ) ); ?>" type="text" value="<?php echo $userfunction; ?>" size="40" />
+		<p><label for="<?php echo esc_attr( $this->get_field_id( 'userfunction' ) ); ?>"><?php esc_html_e( 'Function (must exists)', 'xili-postinpost' ); ?></label><input id="<?php echo $this->get_field_id( 'userfunction' ); ?>" name="<?php echo $this->get_field_name( 'userfunction' ); ?>" type="text" value="<?php echo $userfunction; ?>" size="40" />
 		</p>
 		</fieldset>
 		<?php
 		} else {
 			?>
-			<input type="hidden" id="<?php echo esc_attr( $this->get_field_id( 'beforeall' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'beforeall' ) ); ?>" value="<?php echo $beforeall; ?>"  />
-			<input type="hidden" id="<?php echo esc_attr( $this->get_field_id( 'afterall' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'afterall' ) ); ?>" value="<?php echo $afterall; ?>" />
-			<input type="hidden" id="<?php echo esc_attr( $this->get_field_id( 'beforetitle' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'beforetitle' ) ); ?>" value="<?php echo $beforetitle; ?>"  />
-			<input type="hidden" id="<?php echo esc_attr( $this->get_field_id( 'aftertitle' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'aftertitle' ) ); ?>" value="<?php echo $aftertitle; ?>" />
-			<input type="hidden" id="<?php echo esc_attr( $this->get_field_id( 'liclass' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'liclass' ) ); ?>" value="<?php echo $liclass; ?>"  />
+			<input type="hidden" id="<?php echo esc_attr( $this->get_field_id( 'beforeall' ) ); ?>" name="<?php echo $this->get_field_name( 'beforeall' ); ?>" value="<?php echo $beforeall; ?>"  />
+			<input type="hidden" id="<?php echo $this->get_field_id( 'afterall' ) ; ?>" name="<?php echo esc_attr( $this->get_field_name( 'afterall' ) ); ?>" value="<?php echo $afterall; ?>" />
+			<input type="hidden" id="<?php echo $this->get_field_id( 'beforetitle' ); ?>" name="<?php echo $this->get_field_name( 'beforetitle' ); ?>" value="<?php echo $beforetitle; ?>"  />
+			<input type="hidden" id="<?php echo $this->get_field_id( 'aftertitle' ); ?>" name="<?php echo  $this->get_field_name( 'aftertitle' ); ?>" value="<?php echo $aftertitle; ?>" />
+			<input type="hidden" id="<?php echo $this->get_field_id( 'liclass' ); ?>" name="<?php echo $this->get_field_name( 'liclass' ); ?>" value="<?php echo $liclass; ?>"  />
 			<?php
 		}
 		if ( $xili_postinpost->xili_settings['displayperiod'] ) {
